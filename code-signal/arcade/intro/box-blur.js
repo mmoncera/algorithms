@@ -48,12 +48,8 @@ A blurred image represented as integers, obtained through the process in the des
 
 function solution(image) {
   const result = [];
-  for (let i = 0; i < image.length; i++) {
-    if (i < image.length - 2) {
-      result[i] = [];
-    } else {
-      break;
-    }
+  for (let i = 0; i < image.length - 2; i++) {
+    result[i] = [];
     for (let j = 0; j < image[i].length - 2; j++) {
       const part1 = image[i].slice(j, j + 3);
       const part2 = image[i + 1].slice(j, j + 3);
